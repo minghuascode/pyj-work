@@ -1,0 +1,69 @@
+
+
+linux python 2.7.5 for pyjs.org
+=================================
+
+    python      -- install globally
+    virtualenv  -- install similar to the example below
+    pyjs        -- follow its instruction
+    
+    extract pyjs 564cf5f of Mar 20 2014 into ~/pytest/pyjsroot
+
+    cd ~/pytest/virtualenv-1.11.4
+    python virtualenv.py ~/pytest/pyjsroot/mypy
+
+    cd ~/pytest/pyjsroot
+    mypy/bin/pip install ~/pytest/pyjsroot
+
+    mypy/bin/python examples/helloworld
+
+
+python windows for pyjs.org
+==============================
+
+    python      -- install from gui to e.g. c:\python276
+    pywin32     -- install from gui to the same location
+
+    virtualenva -- install similar to the example below
+    comtypes    -- install using the sandboxed python
+    pyjs        -- follow its instruction
+
+
+virtualenv example on windows
+===============================
+
+    c:\>cd pytest\virtualenv-1.11.4
+    c:\pytest\virtualenv-1.11.4>c:\python276\python.exe virtualenv.py c:\pytest\sandbox
+    New python executable in c:\pytest\sandbox\Scripts\python.exe
+    Installing setuptools, pip...done.
+
+
+pyjs install on windows
+=========================
+
+[1] install python, pywin32
+[2] extract pyjs.zip downloaded from github into c:\pytest\pyjsroot
+
+[3]  
+    c:\>cd pytest\virtualenv-1.11.4
+    c:\pytest\virtualenv-1.11.4>c:\python276\python.exe virtualenv.py c:\pytest\pyjsroot\mypy
+    New python executable in c:\pytest\pyjsroot\mypy\Scripts\python.exe
+    Installing setuptools, pip...done.
+
+[4] 
+    cd c:\pytest\pyjsroot
+    mypy\Scripts\pip.exe install c:\pytest\pyjsroot
+
+[5] 
+    cd c:\pytest\pyjsroot
+    mypy\Scripts\pip.exe install c:\pytest\comtypes-1.0.0
+
+
+pyjs build examples
+=====================
+
+[1] 
+    cd c:\pytest\pyjsroot
+    mypy\Scripts\python.exe examples\helloworld
+
+
