@@ -95,13 +95,33 @@ Run " ..\..\bin\pyjsbuild.bat --print-statements Hello " to build for web.
 Or run " ..\..\bin\pyjd.bat Hello.py " to run on desktop.
 
 
-files
-=======
+win-files
+===========
 
 comtypes-1.0.0.zip 
   https://pypi.python.org/packages/source/c/comtypes/comtypes-1.0.0.zip
 
 pywin32-218.win32-py2.7.exe
   http://sourceforge.net/projects/pywin32/files/pywin32/Build%20218/pywin32-218.win32-py2.7.exe/download
+
+
+sandbox
+=========
+
+See INSTALL.txt in pyj.be. 
+
+The creation of a "sandbox" in python is actually incredibly simple:
+all that is required is that a hard-coded path is inserted into
+sys.path. This job is covered by bootstrap.py.
+
+The files ``pyjd/__init__.py``, ``./bin/pyjsbuild``, ``./bin/pyjscompile``
+and ``pyjd`` will be created, custom-tailored with hard-coded paths specific
+to the exact absolute location that the bootstrap.py command is run from.
+In this way, you will be able to install, test and use multiple versions
+of Pyjamas, without cross-interference.
+
+As they contain hard-coded paths, these custom-tailored commands CANNOT
+be "moved around". If you move the pyjamas installation, re-run bootstrap.py
+to recreate the commands, with suitable hard-coded paths.
 
 
