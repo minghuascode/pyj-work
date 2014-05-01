@@ -62,8 +62,36 @@ pyjs install on windows
 pyjs build examples
 =====================
 
-[1] 
+[1] --this fails
+
     cd c:\pytest\pyjsroot
     mypy\Scripts\python.exe examples\helloworld
+
+[2] --this works. it builds for web. 
+
+    cd c:\pytest\pyjsroot\examples\helloworld
+    ..\..\mypy\Scripts\pyjsbuild.exe Hello.py
+
+[3] --this works. use the pjd.bat file to start on desktop.
+
+    cd c:\pytest\pyjsroot\examples\helloworld
+    pjd.bat Hello.py
+
+
+pyj.be on windows
+=====================
+
+Download latest pyj.be tarball. 
+
+Install python.
+Install setuptools by "python ez_setup.py".
+Install comtypes by "python setup.py install".
+
+Extract pyj tarball. 
+Run "python bootstrap.py" inside pyj.
+
+Change into examples/helloworld. 
+Run " ..\..\bin\pyjsbuild.bat --print-statements Hello " to build for web. 
+Or run " ..\..\bin\pyjd.bat Hello.py " to run on desktop.
 
 
